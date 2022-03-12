@@ -1,0 +1,62 @@
+[
+    {
+        "artist" : "Aimer",
+        "title" : "Kataomoi",
+        "genre" : "J-pop",
+        "year" : 2016
+    },
+    {
+        "artist" : "BTS",
+        "title" : "Crystal Snow",
+        "genre" : "J-pop",
+        "year" : 2018
+    },
+    {
+        "artist" : "IZ*ONE",
+        "title" : "Airplane",
+        "genre" : "K-pop",
+        "year" : 2018
+    },
+    {
+        "artist" : "IZ*ONE",
+        "title" : "Secret Story of the Swan",
+        "genre" : "K-pop",
+        "year" : 2020
+    },
+    {
+        "artist" : "IU",
+        "title" : "Lullaby",
+        "genre" : "K-pop",
+        "year" : 2019
+    },
+    {
+        "artist" : "Queen & David Bowie",
+        "title" : "Under Pressure",
+        "genre" : "ROCK",
+        "year" : 1982
+    },
+    {
+        "artist" : "John Lennon",
+        "title" : "Imagine",
+        "genre" : "ROCK",
+        "year" : 1971
+    },
+    {
+        "artist" : "John Mayer",
+        "title" : "Gravity",
+        "genre" : "ROCK",
+        "year" : 2006
+    },
+    {
+        "artist" : "Lucky Tapes",
+        "title" : "Actor (Blend Ver.)",
+        "genre" : "R&B/Soul",
+        "year" : 2020
+    },
+    {
+        "artist" : "Sunset Rollercoaster",
+        "title" : "I'm a Fish",
+        "genre" : "Mandopop",
+        "year" : 2020
+    }
+]
