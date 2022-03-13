@@ -1,0 +1,91 @@
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+        <link rel="stylesheet" href="style.css">
+        <title>S.Y.C. Band's Song List</title>
+    </head>
+
+
+    <body>
+        <h1>S.Y.C. Band's Song List</h1>
+        <h2>Serialize</h2>
+        <div id = "data"></div>
+        <h2>Our Songs</h2>
+            <form>
+                <select name="choose-genre" id="genre">
+                    <option value="All"> All </option>
+                    <option value="J-pop"> J-POP </option>
+                    <option value="K-pop"> K-POP </option>
+                    <option value="Mandopop"> Mandopop </option>
+                    <option value="ROCK"> ROCK </option>
+                    <option value="R&B/Soul"> "R&B/Soul"</option>
+                </select>
+                <input type="button" value="Filter" class="button" onclick="filter()" >
+            </form>
+        <br>
+        <div id = "display"></div>
+
+
+        <script lang="javascript">
+            var songs_global;
+            var all_string = "";
+            $(document).ready(function() {
+                $.getJSON("https://sysy2001.github.io/hw9//songlist.json", function(songs){
+                    songs_global = songs;
+                    //display part2
+                    serialize(songs);
+                    //display part3
+                    display_all();
+                });
+
+            });
+
+            //part2 display raw string
+            function serialize(songs) {
+                str = JSON.stringify(songs) + "<br><br>";
+                document.getElementById("data").innerHTML = str; 
+            }
+
+            //part3 display all songs in a user friendly way
+            function display_all() {
+                for (i = 0; i < songs_global.length; i++){
+                        var str = concat() + "<br>";
+                        all_string += str + "<br>";
+                }
+                document.getElementById('display').innerHTML = all_string;
+                
+            }
+
+            //helper function, concat strings for certain genre
+            function concat() {
+                var str = "";
+                str += songs_global[i].title + "<br>"
+                str += "Artist: " + songs_global[i].artist + "<br>";
+                str += "Genre: " + songs_global[i].genre + "<br>";
+                str += "Realased " + songs_global[i].year + "<br>";
+                return str;
+            }
+
+            //part4 display filtered result upon user selection
+            function filter() {
+                var chosen = genre.value;
+                var result = "";
+                for( i = 0; i < songs_global.length; i++){
+                    if (chosen == "All"){
+                        document.getElementById('display').innerHTML = all_string;
+                    } else if (chosen == songs_global[i].genre){
+                        var str = concat(str);
+                        result += str + "<br>";
+                        document.getElementById('display').innerHTML = result;
+                    }
+                }
+            }
+
+        </script>
+
+    </body>
+
+
+</html>
